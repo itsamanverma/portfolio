@@ -6,4 +6,4 @@ This portfolio .
 ### 👍 HAVE FUN 👍
 Thanks, people
 
-![Watch Now](.public/img/Design.jpg)
+![Watch Now](./public/img/Design.jpg)
