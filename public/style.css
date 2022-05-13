@@ -568,6 +568,84 @@ p {
 
 /*End contact Section */
 
+/* Company Section */
+
+#company .knowledge {
+	flex-direction: column;
+	text-align: center;
+	max-width: 1500px;
+	margin: 0 auto;
+	padding: 100px 0;
+}
+
+#company .knowledge-top {
+	max-width: 500px;
+	margin: 0 auto;
+}
+
+#company .knowledge-bottom {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-wrap: wrap;
+	margin-top: 50px;
+}
+
+#company .knowledge-item {
+	flex-basis: 80%;
+	display: flex;
+	align-items: flex-start;
+	justify-content: center;
+	flex-direction: column;
+	padding: 30px;
+	border-radius: 10px;
+	background-image: url(./img/aman2.jpg);
+	background-size: cover;
+	margin: 10px 5%;
+	position: relative;
+	z-index: 1;
+	overflow: hidden;
+}
+
+#company .knowledge-item::after {
+	content: '';
+	position: absolute;
+	left: 0;
+	top: 0;
+	height: 100%;
+	width: 100%;
+	background-image: linear-gradient(60deg, #29323c 0%, #485563 100%);
+	opacity: .9;
+	z-index: -1;
+}
+
+#company .knowledge-bottom .icon {
+	height: 80px;
+	width: 80px;
+	margin-bottom: 20px;
+}
+
+#company .knowledge-item h2 {
+	font-size: 2rem;
+	color: white;
+	margin-bottom: 10px;
+	text-transform: uppercase;
+}
+
+#company .knowledge-item p {
+	color: white;
+	text-align: left;
+}
+
+#company .knowledge-item pre {
+	color: white;
+	text-align: left;
+	opacity: 0.7;
+	line-height: 1.2;
+}
+
+/* End knowledge Section */
+
 /* Footer */
 
 #footer {
@@ -754,6 +832,12 @@ p {
 		padding-left: 20px;
 	}
 	/* End contact  */
+	/* Knowledge Section */
+	#company .knowledge-bottom .knowledge-item {
+		flex-basis: 45%;
+		margin: 2.5%;
+	}
+	/* End knowledge Section */
 }
 
 /* End Media Query For Tablet */
