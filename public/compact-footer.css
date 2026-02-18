@@ -1,0 +1,248 @@
+/* ================================================
+   COMPACT RIGHT-ALIGNED FOOTER DESIGN
+   ================================================ */
+
+.compact-footer {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+    background: rgba(242, 166, 90, 0.95);
+    backdrop-filter: blur(20px);
+    border-radius: 16px;
+    padding: 20px;
+    box-shadow: 0 8px 32px rgba(242, 166, 90, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    max-width: 280px;
+    transition: all 0.3s ease;
+}
+
+.compact-footer:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 40px rgba(242, 166, 90, 0.4);
+}
+
+.footer-wrapper {
+    width: 100%;
+}
+
+.footer-content-right {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+/* Brand Section */
+.footer-brand-compact {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 8px;
+}
+
+.logo-mini {
+    width: 40px;
+    height: 40px;
+    background: linear-gradient(135deg, #FFC785 0%, #F2A65A 100%);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.logo-a, .logo-v {
+    font-size: 10px;
+    font-weight: 800;
+    color: white;
+    font-family: 'Outfit', sans-serif;
+    line-height: 1;
+}
+
+.brand-text-mini h3 {
+    font-size: 14px;
+    font-weight: 600;
+    color: white;
+    margin: 0;
+    line-height: 1.2;
+    font-family: 'Outfit', sans-serif;
+}
+
+.brand-text-mini p {
+    font-size: 11px;
+    color: rgba(255, 255, 255, 0.8);
+    margin: 0;
+    line-height: 1.2;
+}
+
+/* Quick Contact */
+.contact-mini {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.contact-item-mini {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 6px 8px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    transition: all 0.2s ease;
+}
+
+.contact-item-mini:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: translateX(3px);
+}
+
+.contact-icon {
+    font-size: 12px;
+}
+
+.contact-item-mini a {
+    color: white;
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+/* Social Mini */
+.social-mini {
+    display: flex;
+    gap: 8px;
+    justify-content: center;
+}
+
+.social-mini-link {
+    width: 32px;
+    height: 32px;
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.social-mini-link:hover {
+    background: rgba(255, 255, 255, 0.25);
+    transform: translateY(-2px);
+}
+
+.social-icon-mini {
+    color: white;
+    font-size: 10px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+/* Status */
+.status-mini {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    justify-content: center;
+    padding: 8px;
+    background: rgba(34, 197, 94, 0.2);
+    border-radius: 8px;
+    border: 1px solid rgba(34, 197, 94, 0.3);
+}
+
+.status-dot-mini {
+    width: 8px;
+    height: 8px;
+    background: #22c55e;
+    border-radius: 50%;
+    animation: pulse 2s infinite;
+}
+
+.status-mini span {
+    color: #4ade80;
+    font-size: 11px;
+    font-weight: 600;
+}
+
+@keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.6; }
+}
+
+/* Copyright */
+.copyright-mini {
+    text-align: center;
+    padding-top: 12px;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.copyright-mini p {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 10px;
+    margin: 0;
+    line-height: 1.2;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .compact-footer {
+        position: static;
+        margin: 20px auto;
+        max-width: 280px;
+        bottom: auto;
+        right: auto;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .compact-footer {
+        margin: 20px;
+        max-width: calc(100% - 40px);
+        padding: 16px;
+    }
+    
+    .footer-brand-compact {
+        justify-content: center;
+        text-align: center;
+    }
+    
+    .contact-mini {
+        gap: 6px;
+    }
+    
+    .social-mini {
+        gap: 6px;
+    }
+    
+    .social-mini-link {
+        width: 28px;
+        height: 28px;
+    }
+}
+
+/* Scroll Animation */
+.compact-footer {
+    animation: slideInFromRight 0.6s ease-out;
+}
+
+@keyframes slideInFromRight {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+/* Hide on scroll up, show on scroll down */
+.footer-hidden {
+    transform: translateX(100%) !important;
+    opacity: 0 !important;
+}
